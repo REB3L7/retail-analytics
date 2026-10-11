@@ -17,7 +17,7 @@ The current Streamlit dashboard reads from the dbt analytics marts in DuckDB. Th
 
 ## Dashboard
 
-![Retail Analytics Platform Dashboard](docs/Retail Analytics Platform Dashboard.pdf)
+![Retail Analytics Platform Dashboard](docs/Retail%20Analytics%20Platform%20Dashboard.pdf)
 
 The executive dashboard provides views into:
 
