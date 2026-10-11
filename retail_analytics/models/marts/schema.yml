@@ -1,0 +1,93 @@
+version: 2
+
+models:
+  - name: sales_by_category
+    description: "Aggregated sales performance by product category."
+    columns:
+      - name: category
+        data_tests:
+          - not_null
+          - unique
+
+      - name: units_sold
+        data_tests:
+          - not_null
+
+      - name: revenue
+        data_tests:
+          - not_null
+
+  - name: sales_by_channel
+    description: "Aggregated sales performance by store and online channels."
+    columns:
+      - name: sales_channel
+        data_tests:
+          - not_null
+          - unique
+          - accepted_values:
+              arguments:
+                values: ['STORE', 'ONLINE']
+
+      - name: total_orders
+        data_tests:
+          - not_null
+
+      - name: revenue
+        data_tests:
+          - not_null
+
+  - name: customer_metrics
+    description: "Customer-level purchasing and lifetime value metrics."
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        data_tests:
+          - not_null
+
+      - name: total_spend
+        data_tests:
+          - not_null
+
+  - name: store_performance
+    description: "Sales performance metrics for each physical retail store."
+    columns:
+      - name: store_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        data_tests:
+          - not_null
+
+      - name: revenue
+        data_tests:
+          - not_null
+
+  - name: monthly_sales
+    description: "Monthly retail sales performance aggregated from order-level transaction data."
+    columns:
+      - name: month
+        description: "Month of the sales activity."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        description: "Number of unique orders placed during the month."
+        data_tests:
+          - not_null
+
+      - name: units_sold
+        description: "Total number of product units sold during the month."
+        data_tests:
+          - not_null
+
+      - name: revenue
+        description: "Total sales revenue generated during the month."
+        data_tests:
+          - not_null

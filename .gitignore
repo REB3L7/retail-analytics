@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Generated datasets
+data/raw/
+data/incoming/
+data/processed/
+data/iceberg/
+
+# DuckDB databases
+*.duckdb
+*.duckdb.wal
+
+# dbt generated files
+retail_analytics/target/
+retail_analytics/logs/
+retail_analytics/dbt_packages/
+
+# Project logs
+logs/
+
+# Streamlit
+.streamlit/secrets.toml
